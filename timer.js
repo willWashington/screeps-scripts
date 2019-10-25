@@ -6,9 +6,11 @@ module.exports = {
       let numOfHarvesters = _.sum(Game.creeps, (c) => c.memory.role == 'harvester');
       let numOfUpgraders = _.sum(Game.creeps, (c) => c.memory.role == 'upgrader');
       let numOfBuilders = _.sum(Game.creeps, (c) => c.memory.role == 'builder');
+      let numOfRepairer = _.sum(Game.creeps, (c) => c.memory.role == 'repairer');
       console.log('[' + numOfHarvesters + ']' + " harvesters");
       console.log('[' + numOfUpgraders + ']' + " upgraders");
       console.log('[' + numOfBuilders + ']' + " builders");
+      console.log('[' + numOfRepairer + ']' + " repairer");
       console.log("[" + Object.keys(Memory.creeps).length + ']' + " TOTAL CREEPS");
 
     }
