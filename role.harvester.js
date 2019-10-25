@@ -6,6 +6,18 @@ module.exports = {
 				//: in creep memory
 
 		//STATE: the creep is working and is empty
+
+		// let structures = creep.room.find(FIND_STRUCTURES);
+		// for (let i in structures) {
+		// 	// console.log(structures[i]);
+		// 	if(structures[i].hits < structures[i].maxHits) {
+		// 		console.log("less than");
+		// 	}
+		// }
+
+
+
+
 		if (creep.memory.working == true && creep.carry.energy == 0) {
 			creep.memory.working = false; //not working state
 			//if the creep isn't working and is full
@@ -25,5 +37,6 @@ module.exports = {
 				creep.moveTo(source); //move to it
 			}
 		}
-  }
+	}
 };
+

@@ -14,11 +14,10 @@ module.exports = {
 		}
 
 		//STATE: the creep is not working and is full
-    if (creep.memory.working == true) { //if working
-      if (creep.upgradeController(creep.room.controller) == ERR_NOT_IN_RANGE) {
-			// if (creep.transfer(Game.spawns.Spawn1, RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
+		if (creep.memory.working == true) { //if working
+			if (creep.transfer(Game.spawns.Spawn1, RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
 					//^ if you try to transfer and can't because of range to spawn
-				creep.moveTo(creep.room.controller); //go to spawn and transfer
+				creep.moveTo(Game.spawns.Spawn1); //go to spawn and transfer
 			}
 		} else {
 			var source = creep.pos.findClosestByPath(FIND_SOURCES); //find closest node
